@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stopwatch</title>
+
+    <!-- ================ FONTS ================= -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body class="stopwatch-section">
+
+    <nav class="top-nav p-1">
+        <h5 class="heading">world clock</h5>
+    </nav>
+
+    <section class="stopwatch">
+        <div class="stopwatch__content">
+            <div class="stopwatch__time">00:05,50</div>
+            <ul class="stopwatch__list">
+                <li class="stopwatch__item stopwatch__item--header color-gray">
+                    <span class="left uppercase">LAP NO.</span>
+                    <span class="center uppercase">SPLIT</span>
+                    <span class="right uppercase">total</span>
+                </li>
+
+                <li class="stopwatch__item stopwatch__item--body">
+                    <span class="left capitalize">lap 4</span>
+                    <span class="center capitalize">00:02,24</span>
+                    <span class="right capitalize">00:05,48</span>
+                </li>
+                <li class="stopwatch__item stopwatch__item--body">
+                    <span class="left capitalize">lap 3</span>
+                    <span class="center capitalize">00:02,24</span>
+                    <span class="right capitalize">00:05,48</span>
+                </li>
+                <li class="color-green stopwatch__item stopwatch__item--body">
+                    <span class="left capitalize">lap 2</span>
+                    <span class="center capitalize">00:02,24</span>
+                    <span class="right capitalize">00:05,48</span>
+                </li>
+                <li class="color-red stopwatch__item stopwatch__item--body">
+                    <span class="left capitalize">lap 1</span>
+                    <span class="center capitalize">00:02,24</span>
+                    <span class="right capitalize">00:05,48</span>
+                </li>
+                <li class="color-red stopwatch__item stopwatch__item--body">
+                    <span class="left capitalize">lap 1</span>
+                    <span class="center capitalize">00:02,24</span>
+                    <span class="right capitalize">00:05,48</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="stopwatch__buttons">
+            <button class="prev-btn btn">lab</button>
+            <button class="next-btn btn">stop</button>
+        </div>
+    </section>
+
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="index.html" class="nav__link">
+                    <svg>
+                        <use xlink:href="img/icons.svg#icon-Icon-world"></use>
+                    </svg>
+                    <span>world clock</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="alarm.html" class="nav__link">
+                    <svg>
+                        <use xlink:href="img/icons.svg#icon-icon-timer"></use>
+                    </svg>
+                    <span>alarm</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="badtime.html" class="nav__link">
+                    <svg>
+                        <use xlink:href="img/icons.svg#icon-Icon-3"></use>
+                    </svg>
+                    <span>Bedtime</span>
+                </a>
+            </li>
+            <li class="nav__item active">
+                <a href="stopwatch.html" class="nav__link">
+                    <svg>
+                        <use xlink:href="img/icons.svg#icon-Icon-4"></use>
+                    </svg>
+                    <span>Stopwatch</span>
+                </a>
+            </li>
+            <li class="nav__item">
+                <a href="timer.html" class="nav__link">
+                    <svg>
+                        <use xlink:href="img/icons.svg#icon-Icon-51"></use>
+                    </svg>
+                    <span>timer</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

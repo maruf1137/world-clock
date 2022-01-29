@@ -1,0 +1,40 @@
+.alarm {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+  width: 100%;
+  height: calc(100vh - 12rem);
+  overflow-y: scroll;
+
+  @media only screen and (max-width: $tab-land) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media only screen and (max-width: 650px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (max-width: $mbl-port) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  &__item {
+    background-color: $color-bg-dark;
+    padding: 5rem;
+
+    @media only screen and (max-width: $mbl-port) {
+      text-align: center;
+    }
+  }
+
+  &__time {
+    font-size: 6rem;
+    font-family: $font-sfUiDisplay-thin;
+    color: $color-gray;
+  }
+
+  &__name,
+  &__repeat,
+  &__sound {
+    font-size: 1.8rem;
+    color: $color-gray;
+  }
+}

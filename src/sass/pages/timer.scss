@@ -1,0 +1,142 @@
+.timer-section {
+  .top-nav {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.timer {
+  width: 100%;
+  height: calc(100vh - 12rem);
+
+  &__content {
+    @include img-size;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__top {
+    @include img-size;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+
+  &__list {
+    height: 23rem;
+    max-width: 32rem;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 40%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+    }
+    &::after {
+      background-image: linear-gradient(
+        rgba(24, 24, 24, 0.973),
+        rgba(24, 24, 24, 0.411)
+      );
+      top: 0;
+    }
+    &::before {
+      background-image: linear-gradient(
+        rgba(24, 24, 24, 0.411),
+        rgba(24, 24, 24, 0.973)
+      );
+      bottom: 0;
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem 2rem;
+    padding: 0 5rem;
+
+    span {
+      font-size: 2.2rem;
+      color: $color-white;
+    }
+
+    .hours {
+    }
+    .min {
+    }
+  }
+  .active {
+    border-top: 1px solid rgba(255, 255, 255, 0.212);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.212);
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 12rem;
+
+    @media only screen and (max-width: $mbl-land) {
+      padding: 5rem 8rem;
+    }
+    @media only screen and (max-width: $mbl-port) {
+      padding: 5rem 5rem;
+    }
+    @media only screen and (max-width: $mbl-small) {
+      padding: 5rem 3rem;
+    }
+
+    .btn-done {
+      color: $color-gray;
+      font-size: 1.7rem;
+    }
+
+    .btn-start {
+      height: 10rem;
+      width: 10rem;
+      border-radius: 50%;
+      color: $color-green;
+      background-color: #4cd96334;
+      font-size: 1.7rem;
+      position: relative;
+      // outline-offset: 0.5rem;
+      // outline: 1px solid #4cd96334;
+
+      &::after {
+        @include button-outline;
+        border: 1px solid #4cd96334;
+      }
+
+      @media only screen and (max-width: $mbl-land) {
+        height: 8rem;
+        width: 8rem;
+      }
+    }
+  }
+
+  &__name {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    svg {
+      height: 4rem;
+      width: 4rem;
+    }
+
+    h5 {
+    }
+  }
+}

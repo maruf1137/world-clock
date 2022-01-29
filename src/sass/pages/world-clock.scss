@@ -1,0 +1,143 @@
+.world-clock {
+  height: calc(100vh - 12.5rem);
+  overflow-y: scroll;
+}
+
+.world {
+  &__img--area {
+    width: 100%;
+    height: 40rem;
+
+    img {
+      @include img-size;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+
+  &__content--area {
+  }
+  .clock {
+    &__item {
+      background-color: $color-bg-dark;
+
+      h5 {
+        color: $color-white;
+      }
+
+      .p__text {
+        color: $color-gray;
+      }
+    }
+
+    &__watch {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__bg {
+      height: 12.5rem;
+      width: 12.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        @include pos-center;
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        background-color: $color-white;
+        border-radius: 50%;
+        z-index: 100;
+      }
+    }
+
+    &__hour,
+    &__min,
+    &__second {
+      position: absolute;
+    }
+
+    &__hour .hr {
+      @include img-size;
+    }
+    &__min .mn {
+      @include img-size;
+    }
+    &__second .sc {
+      @include img-size;
+    }
+    .hr,
+    .mn,
+    .sc {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .hr::before {
+      position: absolute;
+      content: "";
+      width: 0.5rem;
+      height: 3rem;
+      background-color: $color-white;
+      z-index: 10;
+      border-radius: 0 0 1rem 1rem;
+    }
+    .mn::before {
+      position: absolute;
+      content: "";
+      width: 0.3rem;
+      height: 3.5rem;
+      background-color: $color-white;
+      z-index: 11;
+      border-radius: 0 0 1rem 1rem;
+    }
+    .sc::before {
+      position: absolute;
+      content: "";
+      width: 0.2rem;
+      height: 4.5rem;
+      background-color: $color-primary;
+      z-index: 12;
+      border-radius: 0 0 1rem 1rem;
+    }
+
+    .hr {
+      transform: rotate(10deg);
+    }
+    .mn {
+      transform: rotate(90deg);
+    }
+    .sc {
+      transform: rotate(120deg);
+    }
+  }
+  .clock-black .clock__bg {
+    background-image: url(../img/clock-black.png);
+  }
+  .clock-white {
+    .clock__bg {
+      background-image: url(../img/clock-white.png);
+
+      &::before {
+        background-color: $color-black;
+      }
+    }
+    .hr::before,
+    .mn::before {
+      background-color: $color-black;
+    }
+  }
+}

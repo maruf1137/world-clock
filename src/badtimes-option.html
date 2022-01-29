@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- ================ FONTS ================= -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ================ CSS FILES ================= -->
+    <link rel="stylesheet" href="fonts/stylesheet.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body class="badtimes-option badtime-body overlay-active">
+    <div class="overlay"></div>
+    <div class="option">
+      <div class="option__nav p-2 mb-5">
+        <button class="btn btn-cencel">cencel</button>
+        <h5 class="heading">option</h5>
+        <button class="btn btn-text">done</button>
+      </div>
+      <div class="option__days mb-5">
+        <h6 class="heading uppercase">DAYS OF THE WEEK</h6>
+        <div class="option__days--day">
+          <button class="btn btn-text btn-day uppercase">m</button>
+          <button class="btn active btn-text btn-day uppercase">t</button>
+          <button class="btn active btn-text btn-day uppercase">w</button>
+          <button class="btn active btn-text btn-day uppercase">t</button>
+          <button class="btn active btn-text btn-day uppercase">f</button>
+          <button class="btn btn-text btn-day uppercase">s</button>
+          <button class="btn btn-text btn-day uppercase">s</button>
+        </div>
+      </div>
+
+      <ul class="option__list">
+        <li class="option__item mb-5">
+          <h5 class="heading">Bedtime Reminder</h5>
+          <h5 class="heading">40 min</h5>
+        </li>
+        <li class="option__item mb-5">
+          <h5 class="heading">Wake-Up Sound</h5>
+          <h5 class="heading">By The Seaside</h5>
+          <svg class="icon">
+            <use xlink:href="img/icons.svg#icon-keyboard_arrow_right"></use>
+          </svg>
+        </li>
+
+        <h6 class="heading uppercase">DAYS OF THE WEEK</h6>
+        <li class="option__item">
+          <h5 class="heading">Volume</h5>
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="0"
+              class="volume-slider"
+              id="myRange"
+            />
+            <div class="volume-progressbar"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <nav class="top-nav p-1">
+      <button class="btn edit-btn btn-text">edit</button>
+      <h5 class="heading">world clock</h5>
+      <button class="btn plus-btn"></button>
+    </nav>
+
+    <section class="badtime-section">
+      <div class="badtime">
+        <div class="badtime__time">
+          <div class="badtime__settime">
+            <div class="top">
+              <h5 class="heading">badtime</h5>
+              <p class="p__text">Weekdays</p>
+            </div>
+            <div class="center mt-3">
+              <svg class="icon icon-moon">
+                <use xlink:href="img/icons.svg#icon-Icon-1"></use>
+              </svg>
+              <h4 class="heading">badtime</h4>
+            </div>
+            <div class="bottom">23:15</div>
+          </div>
+
+          <div class="badtime__waketime">
+            <div class="top">
+              <label class="switch mt-2">
+                <input type="checkbox" />
+                <span class="slider round checkbox"></span>
+              </label>
+            </div>
+            <div class="center mt-3">
+              <svg class="icon icon-alarm">
+                <use xlink:href="img/icons.svg#icon-Icon1"></use>
+              </svg>
+              <h4 class="heading">wake</h4>
+            </div>
+            <div class="bottom">07:15</div>
+          </div>
+        </div>
+        <div class="badtime__watch">
+          <figure class="badtime__imgarea">
+            <img src="img/Timer.svg" alt="" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="index.html" class="nav__link">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-Icon-world"></use>
+            </svg>
+            <span>world clock</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="alarm.html" class="nav__link">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-icon-timer"></use>
+            </svg>
+            <span>alarm</span>
+          </a>
+        </li>
+        <li class="nav__item active">
+          <a href="badtime.html" class="nav__link">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-Icon-3"></use>
+            </svg>
+            <span>Bedtime</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="stopwatch.html" class="nav__link">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-Icon-4"></use>
+            </svg>
+            <span>Stopwatch</span>
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="timer.html" class="nav__link">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-Icon-51"></use>
+            </svg>
+            <span>timer</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <script>
+      const volumeSlider = document.querySelector(".volume-slider");
+      const volumeProgressbar = document.querySelector(".volume-progressbar");
+
+      volumeSlider.oninput = function () {
+        volumeProgressbar.style.width = this.value + "%";
+      };
+    </script>
+  </body>
+</html>

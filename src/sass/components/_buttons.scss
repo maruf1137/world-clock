@@ -1,0 +1,32 @@
+.btn {
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: capitalize;
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &-cencel {
+    color: $color-primary;
+    font-size: 1.7rem;
+  }
+}
+
+.btn-text {
+  color: $color-primary;
+  font-size: 1.7rem;
+}
+
+.plus-btn {
+  .icon-plus {
+    fill: $color-primary;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}

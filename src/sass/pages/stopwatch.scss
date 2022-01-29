@@ -1,0 +1,151 @@
+.stopwatch-section {
+  .top-nav {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.stopwatch {
+  width: 100%;
+  height: calc(100vh - 12rem);
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__buttons {
+    .next-btn,
+    .prev-btn {
+      height: 7.6rem;
+      width: 7.6rem;
+      border-radius: 50%;
+      position: absolute;
+      font-size: 1.5rem;
+
+      @media only screen and (max-width: $tab-land) {
+        height: 6rem;
+        width: 6rem;
+      }
+    }
+
+    .prev-btn {
+      top: 50%;
+      left: 15%;
+      background-color: #3d3d3d;
+      // outline-offset: 1rem;
+      // outline: 1px solid #3d3d3d;
+      color: $color-white;
+
+      &::after {
+        @include button-outline;
+        border: 1px solid #3d3d3d;
+      }
+
+      @media only screen and (max-width: $tab-land) {
+        left: 5%;
+      }
+      @media only screen and (max-width: $mbl-small) {
+        left: 25%;
+        top: 80%;
+      }
+    }
+
+    .next-btn {
+      top: 50%;
+      right: 15%;
+      background-color: #3e1614;
+
+      color: $color-red;
+      // outline-offset: 1rem;
+      // outline: 1px solid #3e1614;
+
+      &::after {
+        @include button-outline;
+        border: 1px solid #3e1614;
+      }
+
+      @media only screen and (max-width: $tab-land) {
+        right: 5%;
+      }
+      @media only screen and (max-width: $mbl-small) {
+        right: 25%;
+        top: 80%;
+      }
+    }
+  }
+
+  &__content {
+    text-align: center;
+  }
+
+  &__time {
+    font-size: 12rem;
+    font-family: $font-sfUiDisplay-thin;
+
+    @media only screen and (max-width: $mbl-land) {
+      font-size: 8rem;
+    }
+    @media only screen and (max-width: $mbl-port) {
+      font-size: 7rem;
+    }
+    @media only screen and (max-width: $mbl-small) {
+      font-size: 5rem;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    height: 30rem;
+    overflow-y: scroll;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 10rem;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-image: linear-gradient(#1818182a, #181818cb);
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    &:not(:last-child) {
+      border-bottom: 1px solid #ffffff2d;
+    }
+
+    &--header {
+      font-size: 1.5rem;
+    }
+
+    &--body {
+      font-size: 2rem;
+    }
+  }
+}
+
+// items colors
+
+.color-red {
+  span {
+    color: $color-red;
+  }
+}
+.color-gray {
+  span {
+    color: #ffffff83;
+  }
+}
+.color-green {
+  span {
+    color: $color-green;
+  }
+}
